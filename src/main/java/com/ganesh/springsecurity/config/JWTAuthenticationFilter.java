@@ -1,6 +1,7 @@
 package com.ganesh.springsecurity.config;
 
 import com.ganesh.springsecurity.helper.JWTTokenHelper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,7 +20,7 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
     private UserDetailsService userDetailsService;
     private JWTTokenHelper jwtTokenHelper;
 
-    public JWTAuthenticationFilter(UserDetailsService userDetails, JWTTokenHelper jwtTokenHelper) {
+    public JWTAuthenticationFilter(UserDetailsService userDetailsService, JWTTokenHelper jwtTokenHelper) {
         this.userDetailsService = userDetailsService;
         this.jwtTokenHelper = jwtTokenHelper;
     }

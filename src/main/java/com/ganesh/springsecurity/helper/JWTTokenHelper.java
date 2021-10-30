@@ -112,7 +112,7 @@ public class JWTTokenHelper {
 
     public String getToken( HttpServletRequest request ) {
 
-        String authHeader = getAuthHeaderFromHeader( request );
+        String authHeader = this.getAuthHeaderFromHeader( request );
         if ( authHeader != null && authHeader.startsWith("Bearer ")) {
             return authHeader.substring(7);
         }

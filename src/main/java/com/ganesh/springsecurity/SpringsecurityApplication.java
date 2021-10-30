@@ -29,8 +29,8 @@ public class SpringsecurityApplication {
 	protected  void  init()
 {
 	List<Authority> authorityList=new ArrayList<>();
-	authorityList.add( createAuthority("USER","USER role"));
-	authorityList.add(createAuthority("ADMIN","Admin role"));
+	authorityList.add( createAuthority("USER","USER_ROLE"));
+	authorityList.add(createAuthority("ADMIN","ADMIN_ROLE"));
 
 	 User user=new User();
 	 user.setUserName("gani");
